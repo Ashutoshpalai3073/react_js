@@ -1,0 +1,50 @@
+import { useState } from 'react'
+import './App.css'
+
+function App() {
+  // useState makes React re-render the page whenever counter changes
+  const [counter, setCounter] = useState(15)
+
+  const addValue = () => {
+    setCounter(counter + 1)
+  }
+
+  const removeValue = () => {
+    // don't let the counter go below 0
+    if (counter > 0) {
+      setCounter(counter - 1)
+    }
+  }
+
+  return (
+    <div className="app">
+      <main className="content">
+        <h1 className="title">React course with Ashutosh</h1>
+
+        <div className="counter-box">
+          <span className="counter-label">Counter value</span>
+          <span className="counter-value">{counter}</span>
+        </div>
+
+        <div className="button-group">
+          <button className="btn btn-add" onClick={addValue}>
+            Add value
+          </button>
+          <button
+            className="btn btn-remove"
+            onClick={removeValue}
+            disabled={counter === 0}
+          >
+            Remove value
+          </button>
+        </div>
+      </main>
+
+      <footer className="footer">
+        <p>Footer: {counter}</p>
+      </footer>
+    </div>
+  )
+}
+
+export default App

@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.context-app {
+  align-items: center;
+  background-color: #343a40;
+  color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  text-align: center;
+}
+
+.context-app__title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin: 0 0 12px;
+}
+
+.login__title {
+  font-size: 1.25rem;
+  margin: 8px 0 12px;
+}
+
+.login__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+}
+
+.login__form input,
+.login__form button {
+  border: 1px solid #6c757d;
+  border-radius: 3px;
+  font: inherit;
+  min-height: 30px;
+  padding: 4px 8px;
+}
+
+.login__form input {
+  background-color: #292e33;
+  color: #f8f9fa;
+  width: 120px;
+}
+
+.login__form button {
+  background-color: #212529;
+  color: #f8f9fa;
+  cursor: pointer;
+}
+
+.profile-message {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 20px 0 0;
+}
+
+@media (max-width: 420px) {
+  .login__form {
+    max-width: 260px;
+  }
+}

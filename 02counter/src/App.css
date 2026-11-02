@@ -1,0 +1,103 @@
+/* Full-height page: content in the middle, footer at the bottom */
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centers the title, counter and buttons in the middle of the page */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 24px 16px;
+}
+
+/* 1. Title */
+.title {
+  margin: 0;
+  text-align: center;
+}
+
+/* 2. Counter value box */
+.counter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 220px;
+  padding: 20px 40px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.counter-label {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.counter-value {
+  font-family: var(--mono);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-h);
+}
+
+/* 3. Add / Remove boxes next to each other */
+.button-group {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  width: 180px;
+  padding: 18px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, background-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-add {
+  background-color: #16a34a;
+}
+
+.btn-add:hover {
+  background-color: #15803d;
+}
+
+.btn-remove {
+  background-color: #dc2626;
+}
+
+.btn-remove:hover {
+  background-color: #b91c1c;
+}
+
+/* 4. Footer at the bottom of the page */
+.footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  font-size: 16px;
+}
